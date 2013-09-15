@@ -1,15 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class='container'>
+<div class='row'>
 
+<div class='span4'>
 <p>
   <b>Name:</b>
-  <%= @user.name %>
+  <%= @user.name  %>
 </p>
 
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
+</div>
+<div class='span8'>
 
+<%= render 'tweets' %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
+</div>
+</div>

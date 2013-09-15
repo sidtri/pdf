@@ -1,0 +1,4 @@
+<b>List of microposts for this user:</b></br>
+  <%for user in @micropost.user.microposts %>
+  	<%= user.content %></br>
+  <%end%>

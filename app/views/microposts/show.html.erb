@@ -6,10 +6,11 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @micropost.user_id %>
+  <b>User name:</b>
+  <%= @micropost.user.name %>
 </p>
 
+<%= render 'tweets' %>
 
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
 <%= link_to 'Back', microposts_path %>
