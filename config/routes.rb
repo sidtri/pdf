@@ -1,6 +1,8 @@
 Pdf::Application.routes.draw do
   
 
+  devise_for :members
+
   root :to => 'static_pages#home'
   
   match '/signup', to: 'second_users#new'

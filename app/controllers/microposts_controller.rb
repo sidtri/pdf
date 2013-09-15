@@ -1,6 +1,7 @@
 class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
+ before_filter :authenticate_member!
   def index
     @microposts = Micropost.all
 
