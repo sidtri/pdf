@@ -1,6 +1,10 @@
 Pdf::Application.routes.draw do
   
 
+  get "articles/new"
+
+  devise_for :views
+
   devise_for :members
 
   root :to => 'static_pages#home'
@@ -10,9 +14,9 @@ Pdf::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   
-
   resources :microposts
   resources :users
+  resources :articles
  
 
   # The priority is based upon order of creation:
