@@ -1,7 +1,10 @@
 <h1> articles index </h1>
 <% @articles.each do |a| %>
 
-	<p><%=link_to a.title, article_path(a)%></p></br>
+	<h3><%=link_to a.title, article_path(a)%></h3></br>
 
 <p><%=a.body%></p></br>
-	<%end %>
+<div class='underline'></div>
+
+ 	<%end %>
+ 	<%= link_to "Create new article ", new_article_path %>

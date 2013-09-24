@@ -1,2 +1,9 @@
-<h1>Articles </h1>
-<p><% render  %></p>
+<h1>Create a new article </h1>
+<%= form_for(@article) do |a|%>
+
+<%= a.label :title %>
+<%= a.text_field :title %>
+<%= a.label :body %>
+<%= a.text_area :body %></br>
+<%= a.submit %>
+<% end%>
